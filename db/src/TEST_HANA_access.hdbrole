@@ -1,0 +1,15 @@
+{
+    "role": {
+        "name": "com.partha.testhana1::ZPARHANAHDI_access",        
+        "schema_privileges": [
+            {
+                "privileges": [
+                    "SELECT",
+                    "SELECT CDS METADATA",
+                    "UPDATE",
+                    "EXECUTE"
+                ]
+            }
+        ]           
+    }
+}      
