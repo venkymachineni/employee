@@ -4,11 +4,15 @@
   "description": "A simple CAP project.",
   "repository": "<Add your repository here>",
   "license": "UNLICENSED",
+  "engines": {
+    "node": "^18.14.2"
+  },
   "private": true,
   "dependencies": {
     "@sap/cds": "^7",
-    "express": "^4",
-    "@sap/cds-hana": "^2"
+    "@sap/cds-hana": "^2",
+    "@sap/xssec": "^3.6.1",
+    "express": "^4"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^1",
