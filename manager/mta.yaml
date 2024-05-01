@@ -35,11 +35,11 @@ modules:
           TARGET_CONTAINER: manager_HDI      ##+++
 
 ##---------------------------------------------------------
-  - name: employee-db-grantor
-    group: SERVICE_REPLACEMENTS
-    properties:
-      key: logical-employee-db-grantor
-      service: ~{employee-db-grantor-service}   
+      - name: employee-db-grantor
+        group: SERVICE_REPLACEMENTS
+        properties:
+          key: logical-employee-db-grantor
+          service: ${employee-db-grantor-service}   
 ##---------------------------------------------------------
 resources:
   - name: manager-db
