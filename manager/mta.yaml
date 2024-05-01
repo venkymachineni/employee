@@ -31,30 +31,10 @@ modules:
       buildpack: nodejs_buildpack
     requires:
       - name: manager-db
-        properties:                         ##+++
-          TARGET_CONTAINER: manager_HDI      ##+++
 
-##---------------------------------------------------------
-      - name: employee-db-grantor
-        group: SERVICE_REPLACEMENTS
-        properties:
-          key: logical-employee-db-grantor
-          service: ${employee-db-grantor-service}   
-##---------------------------------------------------------
 resources:
   - name: manager-db
     type: com.sap.xs.hdi-container
     parameters:
-      config:                       ##+++
-        schema: manager_HDI
       service: hana
-      service-name: manager_HDI  ##+++
       service-plan: hdi-shared
-  ##---------------------------------------------------------
-  - name: employee-db-grantor
-    type: org.cloudfoundry.existing-service
-    parameters:
-     service-name: employee-db
-    properties:
-     hana_syn-grantor-service: ${service-name}
-##---------------------------------------------------------
